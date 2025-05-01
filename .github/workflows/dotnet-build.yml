@@ -1,0 +1,15 @@
+name: Código e Mensagem Periódica
+
+on:
+  push: 
+  schedule: 
+    - cron: '0 * * * *' 
+
+jobs:
+  codigo-e-mensagem:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Acesso ao código
+      uses: actions/checkout@v3
+    - name: Imprimir mensagem
+      run: echo "Olá! Este é um workflow simples."
